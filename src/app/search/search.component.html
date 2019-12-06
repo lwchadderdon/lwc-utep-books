@@ -1,0 +1,11 @@
+<mat-form-field class="example-full-width">
+  <input
+      #searchBox
+      matInput
+      placeholder="Search for books"
+      (change)="search(searchBox.value)"/>
+</mat-form-field>
+
+<div *ngIf="bookResults$ | async as books" class="book-results">
+  <app-book *ngFor="let book of books" [bookId]="book.id"></app-book>
+</div>

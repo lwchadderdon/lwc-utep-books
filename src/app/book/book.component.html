@@ -1,0 +1,6 @@
+<div>
+  <p>Book with id: {{bookId}}</p>
+  <mat-slide-toggle
+      #favoriteToggle
+      (change)="onFavoriteChange(!favoriteToggle.checked)">Favorite</mat-slide-toggle>
+</div>

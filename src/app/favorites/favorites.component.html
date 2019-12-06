@@ -1,0 +1,4 @@
+<div *ngIf="favorites$ | async as favorites" class="book-results">
+  <app-book
+    *ngFor="let favorite of favorites" [bookId]="favorite"></app-book>
+</div>
